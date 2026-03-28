@@ -3,53 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - Nivel33</title>
+    <title>Nivel33 | Política de Privacidad</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
-        h1 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { color: #2980b9; margin-top: 30px; }
-        .footer { margin-top: 50px; font-size: 0.9em; color: #7f8c8d; border-top: 1px solid #eee; padding-top: 20px; }
+        :root {
+            --primary: #00d2ff;
+            --secondary: #3a7bd5;
+            --bg: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text: #f1f5f9;
+            --accent: #10b981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle at top right, #1e293b, #0f172a);
+            color: var(--text);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Fondo animado sutil */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 20px;
+        }
+
+        /* Header con efecto Glow */
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeInDown 1s ease;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+        }
+
+        .last-update {
+            font-size: 0.9rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        /* Tarjeta principal Glassmorphism */
+        main {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px dashed rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 50px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        h2::before {
+            content: "🎮";
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-weight: 300;
+            color: #cbd5e1;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        li {
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 10px;
+            color: #94a3b8;
+        }
+
+        li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Enlaces */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: all 0.3s;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            border-bottom: 1px solid var(--primary);
+            text-shadow: 0 0 8px var(--primary);
+        }
+
+        /* Footer profesional */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-bottom: 40px;
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+
+        /* Badge de confianza */
+        .badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--accent);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Animaciones */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            main { padding: 30px 20px; }
+        }
     </style>
 </head>
 <body>
 
-    <h1>Política de Privacidad de Nivel33</h1>
-    <p>Última actualización: <strong>29 de Marzo de 2026</strong></p>
+<div class="container">
+    <header>
+        <div class="badge">Privacidad Certificada</div>
+        <h1>Nivel33</h1>
+        <div class="last-update">Versión Actualizada: [FECHA DE HOY]</div>
+    </header>
 
-    <p>Esta página se utiliza para informar a los visitantes y usuarios de <strong>Nivel33</strong> sobre nuestras políticas con respecto a la recopilación, el uso y la divulgación de Información Personal si alguien decide utilizar nuestro Juego.</p>
+    <main>
+        <section>
+            <h2>Compromiso del Desarrollador</h2>
+            <p>Bienvenido a <strong>Nivel33</strong>. Tu privacidad es nuestra prioridad absoluta. Esta página explica de forma transparente cómo manejamos la información en nuestro juego.</p>
+        </section>
 
-    <h2>1. Recopilación y uso de información</h2>
-    <p>Para una mejor experiencia al usar nuestro juego, no requerimos que nos proporciones ninguna información de identificación personal. El juego está diseñado para ejecutarse localmente en tu dispositivo.</p>
-    <p><strong>Nivel33</strong> no recopila, almacena ni comparte datos personales del usuario (como nombre, dirección, correo electrónico o ubicación).</p>
+        <section>
+            <h2>Transparencia de Datos</h2>
+            <p><strong>Nivel33</strong> ha sido desarrollado bajo la premisa de "Privacidad por Diseño". Esto significa:</p>
+            <ul>
+                <li><strong>No recolectamos datos personales:</strong> No pedimos nombres, correos ni números de teléfono.</li>
+                <li><strong>Sin seguimiento de ubicación:</strong> No rastreamos dónde te encuentras.</li>
+                <li><strong>Uso Local:</strong> El progreso del juego se guarda exclusivamente en tu dispositivo.</li>
+            </ul>
+        </section>
 
-    <h2>2. Datos de registro (Log Data)</h2>
-    <p>Queremos informarte que, en caso de error en el juego, podemos utilizar servicios de terceros (como Google Play Services) que pueden recopilar información técnica (Log Data) sobre tu dispositivo, como la versión del sistema operativo y configuraciones del juego, con el único fin de mejorar la estabilidad y corregir fallos.</p>
+        <section>
+            <h2>Servicios de Terceros</h2>
+            <p>Para garantizar el correcto funcionamiento en Android, utilizamos servicios estándar que pueden recopilar identificadores anónimos para analíticas de rendimiento o publicidad mínima si existiese:</p>
+            <ul>
+                <li><a href="https://www.google.com/policies/privacy/" target="_blank">Google Play Services</a></li>
+            </ul>
+        </section>
 
-    <h2>3. Servicios de terceros</h2>
-    <p>El juego utiliza servicios de terceros que pueden recopilar información utilizada para identificarte de forma anónima:</p>
-    <ul>
-        <li><a href="https://www.google.com/policies/privacy/" target="_blank">Google Play Services</a></li>
-    </ul>
+        <section>
+            <h2>Seguridad de la Información</h2>
+            <p>Al ser un juego que no requiere conexión obligatoria ni bases de datos externas de usuarios, tus datos están protegidos por las mismas medidas de seguridad de tu propio sistema operativo Android.</p>
+        </section>
 
-    <h2>4. Cookies</h2>
-    <p>Las cookies son archivos con una pequeña cantidad de datos que se utilizan comúnmente como identificadores únicos anónimos. Este juego no utiliza "cookies" de forma explícita.</p>
+        <section>
+            <h2>Protección de Menores</h2>
+            <p>Nivel33 es apto para todas las audiencias (PEGI 3). Cumplimos estrictamente con las normativas de protección de menores en entornos digitales, asegurando que no se recopila ninguna información de niños.</p>
+        </section>
 
-    <h2>5. Seguridad</h2>
-    <p>Valoramos tu confianza al usar este juego, por lo que nos esforzamos por garantizar que no se procese ningún dato personal. Al ser una aplicación offline o de uso local, el riesgo de exposición de datos es mínimo.</p>
+        <section style="background: rgba(0, 210, 255, 0.05); padding: 25px; border-radius: 15px; border-left: 4px solid var(--primary);">
+            <h2 style="margin-bottom: 10px;">¿Tienes Dudas?</h2>
+            <p>Si tienes cualquier consulta sobre esta política o el desarrollo de Nivel33, puedes contactarme directamente:</p>
+            <p>📧 <strong>Email: <a href="mailto:[TU_CORREO_AQUÍ]">[TU_CORREO_AQUÍ]</a></strong></p>
+        </section>
+    </main>
 
-    <h2>6. Privacidad infantil</h2>
-    <p>Nivel33 es un juego apto para todas las edades. No recopilamos a sabiendas información de identificación personal de niños. Si eres padre o tutor y crees que hemos recibido algún dato, contáctanos para eliminarlo de inmediato.</p>
-
-    <h2>7. Cambios en esta política</h2>
-    <p>Podemos actualizar nuestra Política de Privacidad de vez en cuando. Se te recomienda revisar esta página periódicamente para ver cualquier cambio.</p>
-
-    <h2>8. Contacto</h2>
-    <p>Si tienes alguna pregunta o sugerencia sobre mi Política de Privacidad, no dudes en contactarme en:</p>
-    <p><strong>Correo electrónico: thegamesss2000@gmail.com</strong></p>
-
-    <div class="footer">
-        <p>&copy; 2026 Samuel Romero  - Desarrollador de Nivel33</p>
-    </div>
+    <footer>
+        <p>&copy; 2024 [TU NOMBRE O ESTUDIO] | Todos los derechos reservados.</p>
+        <p>Desarrollado con pasión para la comunidad Android.</p>
+    </footer>
+</div>
 
 </body>
 </html>
